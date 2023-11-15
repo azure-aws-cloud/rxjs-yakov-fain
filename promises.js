@@ -41,7 +41,9 @@ function getOrders(customer){
 
 
 getCustomers()
-    .then(cust => getOrders(cust))
+    .then(cust => {
+       return getOrders(cust) // explicitly return helps to understand better
+    })
     .then(order => console.log(order))
     .catch(err => console.error(err));
 
