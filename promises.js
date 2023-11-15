@@ -42,7 +42,8 @@ function getOrders(customer){
 
 getCustomers()
     .then(cust => {
-       return getOrders(cust) // explicitly return helps to understand better, that a promise has been returned.
+       return getOrders(cust) // explicitly return helps to understand better,
+        // that a promise has been returned.
     })
     .then(order => console.log(order))
     .catch(err => console.error(err));
